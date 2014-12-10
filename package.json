@@ -1,7 +1,7 @@
 {
   "name": "fantasy-ui",
   "theme": "ui",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Default dark theme for interface components",
   "license": "MIT",
   "repository": "https://github.com/nijikokun/fantasy-ui",
