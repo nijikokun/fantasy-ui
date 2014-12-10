@@ -110,3 +110,25 @@
     color: hsl(207, 100%, 50%);
   }
 }
+
+
+.scrollbars-visible-always {
+  .settings-view {
+    /deep/ ::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+
+    ::-webkit-scrollbar-track,
+    /deep/ ::-webkit-scrollbar-track,
+    /deep/ ::-webkit-scrollbar-corner {
+      background: hsl(207, 2%, 4%) !important;
+      box-shadow: none;
+    }
+
+    /deep/ ::-webkit-scrollbar-thumb {
+      background: hsl(210, 5%, 15%);
+      border-radius: 2px;
+    }
+  }
+}
