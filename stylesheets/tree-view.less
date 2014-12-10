@@ -4,9 +4,51 @@
   font-size: @font-size;
   background: @tree-view-background-color;
 
+  .list-item:not(.status-modified) .icon {
+    color: @tree-view-color;
+  }
+
+  .project-root {
+    padding-top: 40px;
+
+    &:after {
+      content: "Folders";
+      display: block;
+      top: 15px;
+      left: 5px;
+      position: absolute;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 11px;
+    }
+  }
+
   .selected:before {
-  	background: #444;
-    box-shadow: inset -3px 0 0 rgba(0,0,0, .05);
+    color: @text-color-subtle;
+  	background: hsl(207, 5%, 12%);
+  }
+
+  .list-item:before,
+  .icon:before {
+    color: hsl(207, 5%, 40%);
+  }
+
+  .list-item:hover .icon {
+    color: hsl(207, 5%, 73%);
+  }
+
+  .status-ignored .icon,
+  .status-ignored .list-item:before,
+  .status-ignored .icon:before {
+    color: hsl(207, 5%, 20%) !important;
+  }
+
+  .expanded {
+    > .list-item {
+      > .icon {
+        color: hsl(207, 5%, 73%);
+      }
+    }
   }
 }
 
@@ -18,21 +60,19 @@
 
 .focusable-panel {
   opacity: 1;
-  background: #303030;
-  box-shadow: inset -3px 0 0 rgba(0,0,0, .05);
+  background: @tree-view-background-color;
 
   &:focus {
-    background: #282828;
-
     .selected:before {
-      background: @background-color-selected;
+      background: hsl(0, 0%, 12%);
     }
 
     .selected > .name,
     .selected > .name:before,
+    .selected > .list-item:before,
     .selected > .list-item > .name,
     .selected > .list-item > .name:before {
-      color: #fff !important;
+      color: hsl(207, 5%, 73%) !important;
     }
   }
 }
