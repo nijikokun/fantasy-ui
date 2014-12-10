@@ -4,7 +4,7 @@ Clean, flat dark ui for Atom.
 
 
 ```bash
-$ apm install fantasy-dark-ui
+$ apm install fantasy-ui
 ```
 
 ![Screenshot](https://github.com/nijikokun/fantasy-ui/raw/master/screenshot-code.png)
