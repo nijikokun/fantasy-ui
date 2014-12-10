@@ -1,0 +1,103 @@
+.settings-view {
+  -webkit-font-smoothing: antialiased;
+
+  .panels {
+    background-color: hsl(207, 2%, 4%);
+    padding-top: 0;
+
+    .thumbnail {
+      background: hsl(207, 5%, 12%);
+
+      .caption {
+        color: hsl(207, 5%, 89%);
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+  }
+
+  .config-menu {
+    background-color: hsl(207, 2%, 6%);
+    box-shadow: none;
+    padding-top: 0;
+
+    .nav > li > a:hover {
+      background-color: hsl(207, 2%, 7%);
+      color: hsl(207, 5%, 73%);
+      box-shadow: none;
+    }
+
+    .nav > li.active > a {
+      background-color: hsl(207, 5%, 15%);
+      color: hsl(207, 5%, 89%);
+      -webkit-font-smoothing: antialiased;
+      font-weight: 600;
+    }
+
+    .panels-menu .panel-menu-separator {
+      border-bottom: 1px solid hsl(207, 5%, 15%);
+      margin: 10px;
+    }
+
+    .panels-packages li > a {
+      overflow: hidden;
+      background-color: hsl(207, 2%, 9%);
+    }
+  }
+
+  section .section-heading:first-child,
+  .section .section-heading:first-child {
+    color: hsl(207, 5%, 89%);
+    border-bottom: 1px solid hsl(207, 5%, 15%);
+    font-weight: 600;
+  }
+
+  .settings-panel label {
+    color: hsl(207, 2%, 73%);
+  }
+
+  .setting-description,
+  .packages .theme-description {
+    color: hsl(207, 2%, 30%);
+  }
+
+  .editor-container .editor.mini,
+  .editor-container .editor.mini::shadow,
+  .editor-container .editor.mini.is-focused,
+  .editor-container .editor.mini.is-focused::shadow {
+    background-color: hsl(207, 5%, 15%);
+    box-shadow: none;
+    border-color: transparent;
+  }
+
+  .text {
+    color: hsl(207, 5%, 73%);
+  }
+
+  .control-group {
+    margin-bottom: 20px;
+  }
+
+  .btn-toolbar {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .btn-default,
+  .btn-group > .btn-default {
+    background: transparent;
+    color: hsl(210, 5%, 30%);
+    padding: 0px 3px;
+    border-color: hsla(0, 0%, 0%, 0);
+
+    &:hover {
+      background: transparent;
+      color: #FFF;
+    }
+  }
+
+  .alert-info {
+    background-color: hsl(207, 5%, 12%);
+    border-color: transparent;
+    color: hsl(207, 100%, 50%);
+  }
+}
