@@ -2,40 +2,45 @@
   -webkit-font-smoothing: antialiased;
 
   .panels {
-    background-color: hsl(207, 2%, 4%);
+    background-color: darken(@app-background-color, 2%);
     padding-top: 0;
 
     .thumbnail {
-      background: hsl(207, 5%, 12%);
+      background: @app-background-color;
       border-color: transparent;
 
       .caption {
-        color: hsl(207, 5%, 89%);
+        color: @text-color-subtle;
         -webkit-font-smoothing: antialiased;
       }
     }
   }
 
   .config-menu {
-    background-color: hsl(207, 2%, 6%);
+    background-color: darken(@app-background-color, 1%);
     box-shadow: none;
     padding-top: 0;
 
+    -webkit-font-smoothing: antialiased;
+
+    .nav > li > a {
+      color: #898e9d;
+    }
+
     .nav > li > a:hover {
-      background-color: hsl(207, 2%, 7%);
-      color: hsl(207, 5%, 73%);
+      background: transparent;
+      color: #FFF;
       box-shadow: none;
     }
 
     .nav > li.active > a {
-      background-color: hsl(207, 5%, 15%);
-      color: hsl(207, 5%, 89%);
-      -webkit-font-smoothing: antialiased;
+      background-color: #343742;
+      color: #FFF;
       font-weight: 600;
     }
 
     .panels-menu .panel-menu-separator {
-      border-bottom: 1px solid hsl(207, 5%, 15%);
+      border-bottom: 1px solid darken(@app-background-color, 3%);
       margin: 10px;
     }
 
@@ -43,39 +48,71 @@
       overflow: hidden;
       background-color: hsl(207, 2%, 9%);
     }
+
+    .btn-default,
+    .btn-group > .btn-default {
+      background: transparent;
+      color: hsl(210, 5%, 30%);
+      padding: 0px 3px;
+      border-color: hsla(0, 0%, 0%, 0);
+
+      &:hover {
+        background: transparent;
+        color: #FFF;
+      }
+    }
+  }
+
+  .search-container .btn-group .btn {
+    padding: 0px 12px;
+    line-height: 32px;
+    height: 32px;
   }
 
   section .section-heading:first-child,
   .section .section-heading:first-child {
-    color: hsl(207, 5%, 89%);
-    border-bottom: 1px solid hsl(207, 5%, 15%);
-    font-weight: 600;
+    color: #FFF;
+    font-weight: 400;
   }
 
   .settings-panel label {
-    color: hsl(207, 2%, 73%);
+    color: #898e9d;
   }
 
   .setting-description,
   .packages .theme-description {
-    color: hsl(207, 2%, 30%);
+    color: #585c68;
   }
 
   .editor-container .editor.mini,
   .editor-container .editor.mini::shadow,
   .editor-container .editor.mini.is-focused,
   .editor-container .editor.mini.is-focused::shadow {
-    background-color: hsl(207, 5%, 15%);
+    background: transparent;
+    border: 2px solid #363a47;
     box-shadow: none;
-    border-color: transparent;
   }
 
   select.form-control {
-    background: hsl(220, 5%, 13%);
-    border-color: hsla(0, 0%, 0%, 0);
+    background: transparent;
+    border: 2px solid #363a47;
+    border-radius: 3px;
     box-shadow: none;
-    color: hsl(0, 0%, 41%);
+    color: #898e9d;
     -webkit-font-smoothing: antialiased;
+
+    &:disabled {
+      color: #585c68;
+      border-color: #343742;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      background: transparent;
+      border-color: #898e9d;
+    }
   }
 
   .text {
@@ -91,23 +128,44 @@
     white-space: nowrap;
   }
 
-  .btn-default,
-  .btn-group > .btn-default {
-    background: transparent;
-    color: hsl(210, 5%, 30%);
-    padding: 0px 3px;
-    border-color: hsla(0, 0%, 0%, 0);
-
-    &:hover {
-      background: transparent;
-      color: #FFF;
-    }
+  .alert-info {
+    background-color: transparent;
+    border-color: transparent;
+    color: #4dbce9;
+    padding: 15px 0;
   }
 
-  .alert-info {
-    background-color: hsl(207, 5%, 12%);
-    border-color: transparent;
-    color: hsl(207, 100%, 50%);
+  .available-package-view {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: 0;
+
+    background: transparent;
+    border-bottom: 2px solid #383c49;
+
+    &.disabled {
+      background-color: hsl(240, 9%, 19%);
+      margin-bottom: 2px;
+      border-bottom: 0;
+    }
+
+    .package-description {
+      color: hsl(225, 9%, 58%);
+    }
+
+    .meta {
+      margin-top: 10px;
+
+      .meta-user {
+        .avatar {
+          border-radius: 50%;
+        }
+
+        .author {
+          color: #FFF;
+        }
+      }
+    }
   }
 }
 
@@ -115,20 +173,19 @@
 .scrollbars-visible-always {
   .settings-view {
     /deep/ ::-webkit-scrollbar {
-      width: 2px;
-      height: 2px;
+      width: 5px;
+      height: 6px;
     }
 
     ::-webkit-scrollbar-track,
     /deep/ ::-webkit-scrollbar-track,
     /deep/ ::-webkit-scrollbar-corner {
-      background: hsl(207, 2%, 4%) !important;
+      background: @app-background-color !important;
       box-shadow: none;
     }
 
     /deep/ ::-webkit-scrollbar-thumb {
-      background: hsl(210, 5%, 15%);
-      border-radius: 2px;
+      background: lighten(@app-background-color, 8%);
     }
   }
 }

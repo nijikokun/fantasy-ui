@@ -25,28 +25,29 @@
 
   .selected:before {
     color: @text-color-subtle;
-  	background: hsl(207, 5%, 12%);
+  	background: #343742;
   }
 
   .list-item:before,
   .icon:before {
-    color: hsl(207, 5%, 40%);
+    color: @text-color;
   }
 
+  .list-item:hover .icon:before,
   .list-item:hover .icon {
-    color: hsl(207, 5%, 73%);
+    color: #FFF;
   }
 
   .status-ignored .icon,
   .status-ignored .list-item:before,
   .status-ignored .icon:before {
-    color: hsl(207, 5%, 20%) !important;
+    color: @text-color-subtle !important;
   }
 
   .expanded {
     > .list-item {
       > .icon {
-        color: hsl(207, 5%, 73%);
+        color: #FFF;
       }
     }
   }
@@ -64,7 +65,7 @@
 
   &:focus {
     .selected:before {
-      background: hsl(210, 10%, 12%);
+      background: #343742;
     }
 
     .selected > .name,
@@ -72,7 +73,7 @@
     .selected > .list-item:before,
     .selected > .list-item > .name,
     .selected > .list-item > .name:before {
-      color: hsl(207, 5%, 73%) !important;
+      color: #FFF !important;
     }
   }
 }

@@ -1,14 +1,14 @@
 // Colors
 
-@text-color: #aaa;
-@text-color-subtle: hsl(207, 8%, 30%);
+@text-color: #898e9d;
+@text-color-subtle: #585c68;
 @text-color-highlight: #fff;
 @text-color-selected: @text-color-highlight;
 
-@text-color-info: #5293d8;
-@text-color-success: #26c26a;
+@text-color-info: #4dbce9;
+@text-color-success: #00e676;
 @text-color-warning: hsl(205, 70%, 55%);
-@text-color-error: #c00;
+@text-color-error: #ff5460;
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
@@ -17,13 +17,13 @@
 @text-color-removed: @text-color-error;
 
 @background-color-info: #0098ff;
-@background-color-success: #17ca65;
+@background-color-success: #00e676;
 @background-color-warning: #ffaa2c;
-@background-color-error: #c00;
+@background-color-error: #ff5460;
 @background-color-highlight: rgba(255, 255, 255, 0.07);
 @background-color-selected: #4182C4;
 
-@app-background-color: hsl(207, 2%, 8%);
+@app-background-color: #292931;
 
 @base-background-color: lighten(@tool-panel-background-color, 2%);
 @base-border-color: @app-background-color;
@@ -31,38 +31,38 @@
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: @app-background-color;
 
-@input-background-color: hsl(207, 5%, 12%);
-@input-border-color: @base-border-color;
+@input-background-color: @app-background-color;
+@input-border-color: #363a47;
 
 @tool-panel-background-color: @app-background-color;
 @tool-panel-border-color: @base-border-color;
 
-@inset-panel-background-color: #161719;
+@inset-panel-background-color: darken(@app-background-color, 2%);
 @inset-panel-border-color: @base-border-color;
 
-@panel-heading-background-color: #43484d;
+@panel-heading-background-color: #343742;
 @panel-heading-border-color: fadein(@base-border-color, 10%);
 
 @overlay-background-color: @app-background-color;
 @overlay-border-color: @background-color-highlight;
 
-@button-background-color: @app-background-color;
+@button-background-color: #343742;
 @button-background-color-hover: lighten(@button-background-color, 5%);
-@button-background-color-selected: hsl(207, 5%, 12%);
+@button-background-color-selected: lighten(@button-background-color, 8%);
 @button-border-color: @base-border-color;
 
 @tab-bar-background-color: @app-background-color;
 @tab-bar-border-color: darken(@tab-background-color-active, 10%);
 @tab-background-color: #333;
-@tab-background-color-active: hsl(207, 5%, 12%);
+@tab-background-color-active: #343742;
 @tab-border-color: #484848;
 
 @tree-view-background-color: @tool-panel-background-color;
 @tree-view-border-color: @tool-panel-border-color;
-@tree-view-color: hsl(207, 5%, 40%);
+@tree-view-color: @text-color;
 
-@scrollbar-background-color: darken(@app-background-color, 3%);
-@scrollbar-color: hsl(207, 5%, 20%);
+@scrollbar-background-color: @app-background-color;
+@scrollbar-color: #343742;
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
