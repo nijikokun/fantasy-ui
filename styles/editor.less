@@ -3,7 +3,6 @@
 
 atom-text-editor[mini] {
   font-size: 13px;
-  line-height: 30px;
   max-height: 32px;
 }
 
@@ -27,8 +26,8 @@ atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
 }
 
-// FIXME: these should go in syntax themes?
-atom-text-editor, atom-text-editor::shadow {
-  .gutter.drop-shadow {
-  }
+atom-text-editor[mini]::shadow .cursor {
+  height: 15px !important;
+  top: 5px;
+  border-color: lighten(@input-border-color, 20%);
 }

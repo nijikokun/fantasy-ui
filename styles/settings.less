@@ -17,7 +17,7 @@
   }
 
   .config-menu {
-    background-color: darken(@app-background-color, 1%);
+    background-color: darken(@app-background-color, 2%);
     box-shadow: none;
     padding-top: 0;
 
@@ -34,7 +34,7 @@
     }
 
     .nav > li.active > a {
-      background-color: #343742;
+      background-color: hsl(227, 12%, 18%);
       color: #FFF;
       font-weight: 600;
     }
@@ -84,10 +84,10 @@
     color: #585c68;
   }
 
-  .editor-container .editor.mini,
-  .editor-container .editor.mini::shadow,
-  .editor-container .editor.mini.is-focused,
-  .editor-container .editor.mini.is-focused::shadow {
+  .editor-container atom-text-editor[mini],
+  .editor-container atom-text-editor[mini]i::shadow,
+  .editor-container atom-text-editor[mini].is-focused,
+  .editor-container atom-text-editor[mini].is-focused::shadow {
     background: transparent;
     border: 2px solid #363a47;
     box-shadow: none;
@@ -187,5 +187,26 @@
     /deep/ ::-webkit-scrollbar-thumb {
       background: lighten(@app-background-color, 8%);
     }
+  }
+
+  .package-card,
+  .package-detail .package-card {
+    border: 1px solid hsl(240, 9%, 20%);
+    background-color: hsl(240, 9%, 20%);
+
+    &:hover {
+      border: 1px solid hsl(240, 9%, 20%);
+      background-color: hsl(240, 9%, 20%);
+    }
+
+    &.disabled {
+      border: 1px solid hsl(240, 9%, 18%);
+      background-color: hsl(240, 9%, 18%);
+      opacity: .8;
+    }
+  }
+
+  .package-readme {
+    font-size: @font-size;
   }
 }
